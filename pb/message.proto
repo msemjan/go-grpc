@@ -1,0 +1,26 @@
+syntax = "proto3";
+option go_package = "./types";
+
+package message;
+
+message Notification  {
+  string title  = 1;
+  string body   = 2;
+  string from   = 3;
+  string for    = 4;
+}
+
+message Notifications {
+  repeated Notification notifications = 1;
+}
+
+message ServerResponse {
+  int32 status = 1;
+}
+
+message Empty {}
+
+service NotificationService {
+  rpc SendNotification(Notification) returns (ServerResponse) {};
+  rpc GetNotifications(Empty) returns (Notifications) {};
+}
