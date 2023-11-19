@@ -3,3 +3,5 @@
 In this repository is an example code for a simple gRPC server and a client written in Go.
 
 Start the server with `go run server.go`. Then you can use `go run client.go` to send a new notification and fetch all the existing notifications.
+
+You can read about this example on my [blog](https://msemjan.github.io/posts/introduction-into-grpc-in-go/).
